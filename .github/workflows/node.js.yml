@@ -28,3 +28,8 @@ jobs:
         cache: 'yarn'
     - run: yarn
     - run: yarn run build
+    - name: Upload static site content 
+      uses: actions/upload-artifact@v3.1.0
+      with:
+        name: static-site
+        path: dist/static
